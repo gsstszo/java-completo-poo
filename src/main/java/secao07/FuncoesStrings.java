@@ -36,6 +36,8 @@ public class FuncoesStrings {
         System.out.println("indexOF 'bc':  " + i);
         System.out.println("lastIndexOF 'bc':  " + j);
         
+        
+        
         String s = "potato apple lemon orange";
         
         String[] vect = s.split(" ");
