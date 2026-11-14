@@ -2,26 +2,28 @@ package secao08;
 
 import java.util.Scanner;
 
-public class ProblemaSemPOO {
+public class ProblemaPOO {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         
-        double xA, xB, xC, yA, yB, yC;
+        Triangle x,y;
+        x = new Triangle();
+        y = new Triangle();
         
         System.out.println("Enter the measures of triangle X: ");
-        xA = entrada.nextDouble();
-        xB = entrada.nextDouble();
-        xC = entrada.nextDouble();
+        x.a = entrada.nextDouble();
+        x.b = entrada.nextDouble();
+        x.c = entrada.nextDouble();
         
         System.out.println("Enter the measures of triangle Y: ");
-        yA = entrada.nextDouble();
-        yB = entrada.nextDouble();
-        yC = entrada.nextDouble();
+        y.a = entrada.nextDouble();
+        y.b= entrada.nextDouble();
+        y.c = entrada.nextDouble();
         
-        double p = (xA + xB + xC) / 2.0;
-        double areax = Math.sqrt(p * (p - xA) * (p - xB) * (p - xC));
-        p = (yA + yB + yC) / 2.0;
-        double areay = Math.sqrt(p * (p - yA) * (p - yB) * (p - yC));
+        double p = (x.a + x.b + x.c) / 2.0;
+        double areax = Math.sqrt(p * (p - x.a) * (p - x.b) * (p - x.c));
+        p = (y.a + y.b + y.c) / 2.0;
+        double areay = Math.sqrt(p * (p - y.a) * (p - y.b) * (p - y.c));
         
         System.out.printf("Triangle X area: %.4f\n",areax);
         System.out.printf("Triangle Y area: %.4f\n",areay);
