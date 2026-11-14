@@ -21,9 +21,23 @@ public class Program {
         product.price = entrada.nextDouble();
         System.out.print("Quantity: ");
         product.quantity = entrada.nextInt();
-        
-        System.out.println(product.name + ", " + product.price + ", " + product.quantity);
-        
+
+        System.out.println();
+        System.out.println("Product data: " + product);
+
+        System.out.println();
+        System.out.println("Enter the number of products to be added in stock: ");
+        int quantity = entrada.nextInt();
+        product.addProducts(quantity);
+
+        System.out.println("Update data: " + product);
+
+        System.out.println();
+        System.out.println("Enter the number of products to be removed in stock: ");
+        quantity = entrada.nextInt();
+        product.removeProducts(quantity);
+
+        System.out.println("Update data" + product);
         entrada.close();
     }
 
