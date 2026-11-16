@@ -12,10 +12,10 @@ public class Account {
 
     }
 
-    public Account(int number, String holder, double balance) {
+    public Account(int number, String holder, double initialDeposit) {
         this.number = number;
         this.holder = holder;
-        this.balance = balance;
+        depositFunds(initialDeposit);
     }
 
     public Account(int number, String holder) {
@@ -46,16 +46,17 @@ public class Account {
 
     public void withdrawBalance(double withdrawValue) {
         balance -= withdrawValue + BANK_FEE;
+        
     }
 
     public String toString() {
         return "Account "
-                + this.number
+                + number
                 + ", "
                 + "Holder: "
-                + this.holder
+                + holder
                 + ", "
                 + "Balance: $ "
-                + this.balance;
+                + String.format("%.2f", balance);
     }
 }
