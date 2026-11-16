@@ -18,7 +18,7 @@ public class Program {
 
         Product product = new Product(name, price);
         
-        System.out.println();
+        
         System.out.println("Product data: " + product);
 
         System.out.println();
